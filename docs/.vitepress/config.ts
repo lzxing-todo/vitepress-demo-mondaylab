@@ -1,11 +1,12 @@
 import { defineConfig } from 'vitepress';
-import { sidebar, nav } from './relaConf';
+import { newnav } from './relaConf';
+import { sidebar } from './relaConf';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/vitepress-demo-mondaylab/',
-  title: 'mondaylab-demo-blog',
-  description: 'A VitePress Site',
+  title: 'Lzxing Study',
+  description: 'Study Share',
 
   // 配置markdown写作风格
   // markdown: {
@@ -29,29 +30,27 @@ export default defineConfig({
   // },
 
   themeConfig: {
-    logo: '/avatar.png',
+    logo: '/avatar.JPG',
     // https://vitepress.dev/reference/default-theme-config
-    nav: nav,
+    nav: newnav,
     sidebar: sidebar,
 
     search: {
       provider: 'local'
     },
-
-    outline: {
-      level: [2, 6],
-      label: '目录'
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
     },
-
-    i18nRouting: true,
-
-    carbonAds: {
-      code: 'your-carbon-code',
-      placement: 'your-carbon-placement'
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2019-present Evan You'
     },
-
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/lzxing-todo' }
     ]
   }
 });
